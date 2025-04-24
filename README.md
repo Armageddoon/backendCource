@@ -1,2 +1,2 @@
 # backendCource
-Cource
+Cource repository
