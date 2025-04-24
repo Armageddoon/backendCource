@@ -1,6 +1,5 @@
 from fastapi import FastAPI, Query, Body
 from fastapi.openapi.docs import get_swagger_ui_html
-from typing import Optional
 import uvicorn
 
 app = FastAPI(docs_url=None)
@@ -45,28 +44,36 @@ def delete_hotel(hotel_id: int):
     return {"status": "OK"}
 
 
-def update_hotel(hotels: list,
-                 hotel_id: int,
-                 title: Optional[str],
-                 name: Optional[str]):
-    for hotel in hotels:
-        if hotel['id'] == hotel_id:
-            if title is not None:
-                hotel['title'] = title
-            if name is not None:
-                hotel['name'] = name
-            return {"status": "ok"}
-
-
 @app.put("/hotels/{hotel_id}")
-def put_hotel(hotel_id: int, title: str = Body(), name: str = Body()):
+def edit_hotel(
+        hotel_id: int,
+        title: str = Body(),
+        name: str = Body(),
+):
     global hotels
-    return update_hotel(hotels, hotel_id, title, name)
+    hotel = [hotel for hotel in hotels if hotel["id"] == hotel_id][0]
+    hotel["title"] = title
+    hotel["name"] = name
+    return {"status": "OK"}
 
-@app.patch("/hotels/{hotel_id}")
-def patch_hotel(hotel_id: int, title: Optional[str] = Body(None), name: Optional[str] = Body(None)):
+
+@app.patch(
+    "/hotels/{hotel_id}",
+    summary="Частичное обновление данных об отеле",
+    description="<h1>Тут мы частично обновляем данные об отеле: можно отправить name, а можно title</h1>",
+)
+def partially_edit_hotel(
+        hotel_id: int,
+        title: str | None = Body(None),
+        name: str | None = Body(None),
+):
     global hotels
-    return update_hotel(hotels, hotel_id, title, name)
+    hotel = [hotel for hotel in hotels if hotel["id"] == hotel_id][0]
+    if title:
+        hotel["title"] = title
+    if name:
+        hotel["name"] = name
+    return {"status": "OK"}
 
 
 @app.get("/docs", include_in_schema=False)
