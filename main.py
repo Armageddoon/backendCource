@@ -1,5 +1,6 @@
 from fastapi import FastAPI, Query, Body
 from fastapi.openapi.docs import get_swagger_ui_html
+from typing import Optional
 import uvicorn
 
 app = FastAPI(docs_url=None)
@@ -43,28 +44,29 @@ def delete_hotel(hotel_id: int):
     hotels = [hotel for hotel in hotels if hotel["id"] != hotel_id]
     return {"status": "OK"}
 
-@app.put("/hotels/{hotel_id}")
-def put_hotel(hotel_id: int, title: str = Body(embed=True), name: str = Body(embed=True)):
-    global hotels
+
+def update_hotel(hotels: list,
+                 hotel_id: int,
+                 title: Optional[str],
+                 name: Optional[str]):
     for hotel in hotels:
-        if hotel["id"] == hotel_id:
-            hotel["title"] = title
-            hotel["name"] = name
-            return {"status": "OK"}
+        if hotel['id'] == hotel_id:
+            if title is not None:
+                hotel['title'] = title
+            if name is not None:
+                hotel['name'] = name
+            return {"status": "ok"}
+
+
+@app.put("/hotels/{hotel_id}")
+def put_hotel(hotel_id: int, title: str = Body(), name: str = Body()):
+    global hotels
+    return update_hotel(hotels, hotel_id, title, name)
 
 @app.patch("/hotels/{hotel_id}")
-def patch_hotel(hotel_id: int, title: str = Body(embed=False), name: str = Body(embed=False)):
+def patch_hotel(hotel_id: int, title: Optional[str] = Body(None), name: Optional[str] = Body(None)):
     global hotels
-    for hotel in hotels:
-        if hotel["id"] == hotel_id:
-            if tytle:
-                hotel["title"] = title
-                return {"title": "OK"}
-            if name:
-                hotel["name"] = name
-                return {"name change": "OK"}
-
-
+    return update_hotel(hotels, hotel_id, title, name)
 
 
 @app.get("/docs", include_in_schema=False)
