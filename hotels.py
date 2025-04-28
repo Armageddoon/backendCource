@@ -20,6 +20,8 @@ hotels = [
 def get_hotels(
         id: int | None = Query(None, description="Айдишник"),
         title: str | None = Query(None, description="Название отеля"),
+        page: int | None = Query(None, description="Страница"),
+        per_page: int | None = Query(None, description="Количество на странице")
 ):
     hotels_ = []
     for hotel in hotels:
@@ -28,7 +30,10 @@ def get_hotels(
         if title and hotel["title"] != title:
             continue
         hotels_.append(hotel)
-    return hotels_
+    start = (page - 1) * per_page if page and per_page else 0
+    end = start + per_page if per_page else len(hotels_)
+    print(start, end)
+    return hotels_[start:end]
 
 
 @router.post("")

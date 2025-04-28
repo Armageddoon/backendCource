@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0de12d09-c081-4e5b-8fd2-ca309415f71f" name="Changes" comment="PUT, PATCH">
-      <change afterPath="$PROJECT_DIR$/hotels.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schemas/hotels.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/backendCource.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/backendCource.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="0de12d09-c081-4e5b-8fd2-ca309415f71f" name="Changes" comment="Конец 5 ступени">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp.py" beforeDir="false" afterPath="$PROJECT_DIR$/_cource_helpers/fastapi_load_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels.py" beforeDir="false" afterPath="$PROJECT_DIR$/hotels.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +35,9 @@
     &quot;accountId&quot;: &quot;ceb40104-f761-429f-a37e-e23ea3a61e71&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -105,7 +103,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745474610845</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Конец 5 ступени">
+      <option name="closed" value="true" />
+      <created>1745824946951</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1745824946951</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,7 +142,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="PUT, PATCH" />
-    <option name="LAST_COMMIT_MESSAGE" value="PUT, PATCH" />
+    <MESSAGE value="Конец 5 ступени" />
+    <option name="LAST_COMMIT_MESSAGE" value="Конец 5 ступени" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backendCource$main.coverage" NAME="main Coverage Results" MODIFIED="1745744943868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
