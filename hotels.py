@@ -30,8 +30,10 @@ def get_hotels(
         if title and hotel["title"] != title:
             continue
         hotels_.append(hotel)
-    start = (page - 1) * per_page if page and per_page else 0
-    end = start + per_page if per_page else len(hotels_)
+    page_ = page if page else 1
+    per_page_ = per_page if per_page else 3
+    start = (page_ - 1) * per_page_
+    end = start + per_page_
     print(start, end)
     return hotels_[start:end]
 
