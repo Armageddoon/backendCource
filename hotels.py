@@ -20,8 +20,8 @@ hotels = [
 def get_hotels(
         id: int | None = Query(None, description="Айдишник"),
         title: str | None = Query(None, description="Название отеля"),
-        page: int | None = Query(None, description="Страница"),
-        per_page: int | None = Query(None, description="Количество на странице")
+        page: int | None = Query(None, gt=1),
+        per_page: int | None = Query(None, gt=1, lt=30),
 ):
     hotels_ = []
     for hotel in hotels:
@@ -30,12 +30,10 @@ def get_hotels(
         if title and hotel["title"] != title:
             continue
         hotels_.append(hotel)
-    page_ = page if page else 1
-    per_page_ = per_page if per_page else 3
-    start = (page_ - 1) * per_page_
-    end = start + per_page_
-    print(start, end)
-    return hotels_[start:end]
+
+    if page and per_page:
+        return hotels_[per_page * (page-1):][:per_page]
+    return hotels_
 
 
 @router.post("")
@@ -62,7 +60,7 @@ def create_hotel(hotel_data: Hotel = Body(openapi_examples={
         "title": hotel_data.title,
         "name": hotel_data.name,
     })
-    return {"status": "OK"}
+    return {"status": "Ok"}
 
 
 @router.put("/{hotel_id}")
