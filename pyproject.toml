@@ -43,6 +43,8 @@ websockets = "12.0"
 pydantic-settings = "^2.9.1"
 sqlalchemy = "^2.0.40"
 asyncpg = "^0.30.0"
+alembic = "^1.15.2"
+greenlet = "^3.2.1"
 
 
 [build-system]
