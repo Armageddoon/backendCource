@@ -12,10 +12,6 @@ from src.api.hotels import router as router_hotels
 
 from src.config import settings
 
-print(f"{settings.DB_URL}")
-
-# from src.database import *
-
 app = FastAPI(docs_url=None)
 
 app.include_router(router_hotels, tags=["Отели"])
