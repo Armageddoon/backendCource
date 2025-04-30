@@ -45,6 +45,7 @@ sqlalchemy = "^2.0.40"
 asyncpg = "^0.30.0"
 alembic = "^1.15.2"
 greenlet = "^3.2.1"
+black = "^25.1.0"
 
 
 [build-system]
