@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0de12d09-c081-4e5b-8fd2-ca309415f71f" name="Changes" comment="Before migrations error">
-      <change afterPath="$PROJECT_DIR$/src/repositories/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/repositories/hotels.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/repositories/rooms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/backendCource.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/backendCource.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
+    <list default="true" id="0de12d09-c081-4e5b-8fd2-ca309415f71f" name="Changes" comment="Inserting data through a repository">
       <change beforePath="$PROJECT_DIR$/src/api/hotels.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/hotels.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/hotels.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/hotels.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745917490408</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Inserting data through a repository">
+      <option name="closed" value="true" />
+      <created>1746432554680</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1746432554680</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,7 +248,8 @@
     <MESSAGE value="Пагинация для отелей с Depends" />
     <MESSAGE value="Before migrations" />
     <MESSAGE value="Before migrations error" />
-    <option name="LAST_COMMIT_MESSAGE" value="Before migrations error" />
+    <MESSAGE value="Inserting data through a repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inserting data through a repository" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backendCource$main.coverage" NAME="main Coverage Results" MODIFIED="1746067926520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
