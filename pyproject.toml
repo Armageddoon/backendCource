@@ -46,6 +46,8 @@ asyncpg = "^0.30.0"
 alembic = "^1.15.2"
 greenlet = "^3.2.1"
 black = "^25.1.0"
+pyjwt = "^2.10.1"
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
 
 
 [build-system]
