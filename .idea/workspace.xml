@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0de12d09-c081-4e5b-8fd2-ca309415f71f" name="Changes" comment="Autentification">
+    <list default="true" id="0de12d09-c081-4e5b-8fd2-ca309415f71f" name="Changes" comment="request.cookies">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/dependencies.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/dependencies.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/auth.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746584584362</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="request.cookies">
+      <option name="closed" value="true" />
+      <created>1746585877667</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1746585877667</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,7 +294,8 @@
     <MESSAGE value="Inserting data through a repository (decision)" />
     <MESSAGE value="Get_one" />
     <MESSAGE value="Autentification" />
-    <option name="LAST_COMMIT_MESSAGE" value="Autentification" />
+    <MESSAGE value="request.cookies" />
+    <option name="LAST_COMMIT_MESSAGE" value="request.cookies" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backendCource$main.coverage" NAME="main Coverage Results" MODIFIED="1746539258629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
