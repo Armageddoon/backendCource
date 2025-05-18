@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException, Response, Request
+from fastapi import APIRouter, HTTPException, Response
 
 from src.api.dependencies import UserIdDep, DBDep
 from src.schemas.users import UserRequestAdd, UserAdd
@@ -22,9 +22,9 @@ async def register_user(
 
 @router.post("/login")
 async def login_user(
-        db: DBDep,
         data: UserRequestAdd,
         response: Response,
+        db: DBDep,
 ):
     user = await db.users.get_user_with_hashed_password(email=data.email)
     if not user:
@@ -38,13 +38,14 @@ async def login_user(
 
 @router.get("/me")
 async def get_me(
-        db: DBDep,
         user_id: UserIdDep,
+        db: DBDep,
 ):
     user = await db.users.get_one_or_none(id=user_id)
     return user
 
+
 @router.post("/logout")
-async def log_out(response: Response) -> None:
+async def logout(response: Response):
     response.delete_cookie("access_token")
-    return {"message": "Logged out successfully"}
+    return {"status": "OK"}
